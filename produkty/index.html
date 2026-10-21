@@ -29,18 +29,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>HIFANCY · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-hifancy/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-hifancy/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
-<main class="wrap"><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://hifancy.vapepl.com/">HIFANCY</a><span class="sep">›</span>Produkty</nav><h1>Wszystkie produkty HIFANCY (40)</h1>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-hifancy/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
+<main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://hifancy.vapepl.com/">HIFANCY</a><span class="sep">›</span>Produkty</nav><h1>Wszystkie produkty HIFANCY (40)</h1>
 <p class="lead-sm">Przefiltruj po profilu smakowym lub przejdź bezpośrednio do wybranej kategorii.</p>
 <div class="flavor-filter" role="tablist" aria-label="Filtruj po kategorii smaku"><button class="chip active" data-cat="all" onclick="catFilter(this)">Wszystkie (40)</button><button class="chip" data-cat="owocowe" style="--cc:#16a34a" onclick="catFilter(this)">Owocowe (16)</button><button class="chip" data-cat="ice-menthol" style="--cc:#0891b2" onclick="catFilter(this)">Ice &amp; Menthol (13)</button><button class="chip" data-cat="slodycze" style="--cc:#db2777" onclick="catFilter(this)">Słodycze &amp; Desery (6)</button><button class="chip" data-cat="napoje" style="--cc:#d97706" onclick="catFilter(this)">Napoje (5)</button></div>
 <script>
@@ -65,7 +85,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-lemon-lime" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-lemon-lime" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-dream-45000-puffs-peach-mango-watermelon/"><img src="/assets/img/52d7eaf540fa4150-480.webp" alt="HIFANCY DREAM 45000 PUFFS — Peach Mango Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -76,7 +96,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-peach-mango-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-peach-mango-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-dream-45000-puffs-strawberry-banana/"><img src="/assets/img/52d7eaf540fa4150-480.webp" alt="HIFANCY DREAM 45000 PUFFS — STRAWBERRY BANANA" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -87,7 +107,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-strawberry-banana" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-strawberry-banana" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-space-50000-puffs-grape-burst/"><img src="/assets/img/d48c0dc2f2acba92-480.webp" alt="HIFANCY SPACE 50000 PUFFS — Grape Burst" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -98,7 +118,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-grape-burst" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-grape-burst" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-space-50000-puffs-kiwi-passion-fruit-guava/"><img src="/assets/img/d48c0dc2f2acba92-480.webp" alt="HIFANCY SPACE 50000 PUFFS — Kiwi Passion Fruit Guava" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -109,7 +129,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-kiwi-passion-fruit-guava" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-space-50000-puffs-mixed-berry/"><img src="/assets/img/d48c0dc2f2acba92-480.webp" alt="HIFANCY SPACE 50000 PUFFS — MIXED BERRY" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -120,7 +140,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-mixed-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-mixed-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-space-50000-puffs-peach-mango-pineapple/"><img src="/assets/img/d48c0dc2f2acba92-480.webp" alt="HIFANCY SPACE 50000 PUFFS — Peach Mango Pineapple" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -131,7 +151,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-peach-mango-pineapple" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-peach-mango-pineapple" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-space-50000-puffs-raspberry-watermelon/"><img src="/assets/img/d48c0dc2f2acba92-480.webp" alt="HIFANCY SPACE 50000 PUFFS — Raspberry Watermelon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -142,7 +162,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-raspberry-watermelon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-raspberry-watermelon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-space-50000-puffs-strawberry-kiwi/"><img src="/assets/img/d48c0dc2f2acba92-480.webp" alt="HIFANCY SPACE 50000 PUFFS — Strawberry Kiwi" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -153,7 +173,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-strawberry-kiwi" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-grape-burst/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — Grape Burst" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -164,7 +184,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-grape-burst" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-grape-burst" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-kumquat-lemon/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — Kumquat Lemon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -175,7 +195,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-kumquat-lemon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-kumquat-lemon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-peach-berry/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — Peach Berry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -186,7 +206,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-peach-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-peach-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-tropical-fruit/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — Tropical Fruit" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -197,7 +217,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-tropical-fruit" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-tropical-fruit" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="cola">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-cocoloco/"><img src="/assets/img/e9b8884c0f172a28-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — COCOLOCO" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -208,7 +228,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-cocoloco" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-cocoloco" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-lemon-lime/"><img src="/assets/img/961147030fa7cf3f-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — LEMON LIME" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -219,7 +239,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-lemon-lime" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-lemon-lime" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-lemon-peach/"><img src="/assets/img/d085a5e81bfc5100-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — Lemon Peach" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -230,7 +250,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-lemon-peach" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-lemon-peach" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block cat-block" id="kat-ice-menthol" data-cat-block="ice-menthol">
@@ -244,7 +264,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-strawberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/hifancy-dream-45000-puffs-watermelon-ice/"><img src="/assets/img/52d7eaf540fa4150-480.webp" alt="HIFANCY DREAM 45000 PUFFS — WATERMELON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -255,7 +275,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice">
   <a class="card-media" href="/produkt/hifancy-dream-45000-puffs-blue-razz-ice/"><img src="/assets/img/52d7eaf540fa4150-480.webp" alt="HIFANCY DREAM 45000 PUFFS — Blue Razz Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -266,7 +286,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-blue-razz-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-blue-razz-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice cola">
   <a class="card-media" href="/produkt/hifancy-dream-45000-puffs-cola-ice/"><img src="/assets/img/52d7eaf540fa4150-480.webp" alt="HIFANCY DREAM 45000 PUFFS — Cola Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -277,7 +297,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-cola-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-cola-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/hifancy-dream-45000-puffs-juicy-peach-ice/"><img src="/assets/img/52d7eaf540fa4150-480.webp" alt="HIFANCY DREAM 45000 PUFFS — Juicy Peach Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -288,7 +308,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-juicy-peach-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-juicy-peach-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/hifancy-space-50000-puffs-blueberry-ice/"><img src="/assets/img/d48c0dc2f2acba92-480.webp" alt="HIFANCY SPACE 50000 PUFFS — BLUEBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -299,7 +319,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-blueberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-blueberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="fruit mint">
   <a class="card-media" href="/produkt/hifancy-space-50000-puffs-lady-killa-blueberry-mango-cranberry-mint/"><img src="/assets/img/d48c0dc2f2acba92-480.webp" alt="HIFANCY SPACE 50000 PUFFS — Lady Killa (Blueberry Mango Cranberry Mint)" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -310,7 +330,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-lady-killa-blueberry-mango-cranberry-mint" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-lady-killa-blueberry-mango-cranberry-mint" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice sweet">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-black-dragon-ice/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — Black Dragon Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -321,7 +341,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-black-dragon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-black-dragon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-blue-razz-lemon/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — Blue Razz Lemon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -332,7 +352,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-blue-razz-lemon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-blue-razz-lemon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-watermelon-ice/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — WATERMELON ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -343,7 +363,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-watermelon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-blue-razz-ice/"><img src="/assets/img/f7bc652feae4017a-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — Blue Razz Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -354,7 +374,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-blue-razz-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-blue-razz-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-blueberry-ice/"><img src="/assets/img/bd6148879b2ced91-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — BLUEBERRY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -365,7 +385,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-blueberry-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-blueberry-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-frozen-white-grape/"><img src="/assets/img/41b9ecda21145917-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — FROZEN WHITE GRAPE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -376,7 +396,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-frozen-white-grape" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-frozen-white-grape" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block cat-block" id="kat-slodycze" data-cat-block="slodycze">
@@ -390,7 +410,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-love-66" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-love-66" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="sweet">
   <a class="card-media" href="/produkt/hifancy-dream-45000-puffs-summer-dream/"><img src="/assets/img/52d7eaf540fa4150-480.webp" alt="HIFANCY DREAM 45000 PUFFS — Summer Dream" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -401,7 +421,7 @@ function catFilter(btn){
       <span class="price">70 zł</span>
       <span class="price-old">80 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-summer-dream" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-dream-45000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-dream-45000-puffs-summer-dream" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="mix">
   <a class="card-media" href="/produkt/hifancy-space-50000-puffs-love-66/"><img src="/assets/img/d48c0dc2f2acba92-480.webp" alt="HIFANCY SPACE 50000 PUFFS — Love 66" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -412,7 +432,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-love-66" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-love-66" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-blueberry-candy-jam/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — Blueberry Candy Jam" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -423,7 +443,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-blueberry-candy-jam" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-blueberry-candy-jam" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="sweet">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-summer-dream/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — Summer Dream" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -434,7 +454,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-summer-dream" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-summer-dream" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="mix">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-pink-samba/"><img src="/assets/img/0cf19f66b203bf80-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — PINK SAMBA" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -445,7 +465,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-pink-samba" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-pink-samba" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block cat-block" id="kat-napoje" data-cat-block="napoje">
@@ -459,7 +479,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">85 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-sex-on-the-beach-orange-peach-berry-rum" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-space-50000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-space-50000-puffs-sex-on-the-beach-orange-peach-berry-rum" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="cola fruit">
   <a class="card-media" href="/produkt/hifancy-super-70000-puffs-blueberry-cherry-cola/"><img src="/assets/img/798d07c690846f3c-480.webp" alt="HIFANCY SUPER 70000 PUFFS — Blueberry Cherry Cola" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -470,7 +490,7 @@ function catFilter(btn){
       <span class="price">100 zł</span>
       <span class="price-old">110 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-blueberry-cherry-cola" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-super-70000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-super-70000-puffs-blueberry-cherry-cola" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="cola fruit">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-cherry-cola/"><img src="/assets/img/25cfde19a1e1543d-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — CHERRY COLA" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -481,7 +501,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-cherry-cola" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-mixed-berry-soda/"><img src="/assets/img/226229eec57e208d-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — MIXED BERRY SODA" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -492,7 +512,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-mixed-berry-soda" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-mixed-berry-soda" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="fruit">
   <a class="card-media" href="/produkt/hifancy-clear-80000-puffs-strawberry-redbull/"><img src="/assets/img/7fb5925ebdc3ea91-480.webp" alt="HIFANCY CLEAR 80000 PUFFS — STRAWBERRY REDBULL" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -503,7 +523,7 @@ function catFilter(btn){
       <span class="price">125 zł</span>
       <span class="price-old">140 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-strawberry-redbull" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/hifancy-clear-80000-puffs/?utm_source=hifancy&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-hifancy-clear-80000-puffs-strawberry-redbull" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section>
